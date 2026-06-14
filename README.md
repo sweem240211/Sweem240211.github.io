@@ -39,22 +39,24 @@
         <br><h4>$\textsf{\color{#ff3845}{Typescript}}$</h4>
     </td>
     <td align="center" width="90">
-        <a href="https://www.php.net/" target="_blank"><img alt="PHP" width="45" src="https://raw.githubusercontent.com/BeautifulMoon211/BeautifulMoon211/auxiliary/languages/php.svg" /></a>
-        <br><h4>$\textsf{\color{#ff3845}{Php}}$</h4>
+        <a href="https://learn.microsoft.com/en-us/dotnet/csharp/" target="_blank"><img alt="C#" width="45" height="45" src="https://raw.githubusercontent.com/BeautifulMoon211/BeautifulMoon211/auxiliary/languages/c%23.svg" /></a>
+        <br><h4>$\textsf{\color{#ff3845}{C\#}}$</h4>
     </td>
     <td align="center" width="90">
         <a href="https://www.java.com/" target="_blank"><img alt="Java" width="45" height="45" src="https://raw.githubusercontent.com/BeautifulMoon211/BeautifulMoon211/auxiliary/languages/java.svg" /></a>
         <br><h4>$\textsf{\color{#ff3845}{Java}}$</h4>
     </td>
     <td align="center" width="90">
+        <a href="https://go.dev/" target="_blank"><img alt="Go" width="45" height="45" src="https://raw.githubusercontent.com/BeautifulMoon211/BeautifulMoon211/auxiliary/languages/golang.svg" /></a>
+        <br><h4>$\textsf{\color{#ff3845}{Golang}}$</h4>
+    </td>
+    <td align="center" width="90">
+        <a href="https://www.php.net/" target="_blank"><img alt="PHP" width="45" height="45" src="https://raw.githubusercontent.com/BeautifulMoon211/BeautifulMoon211/auxiliary/languages/php.svg" /></a>
+        <br><h4>$\textsf{\color{#ff3845}{Php}}$</h4>
+    </td>
+    <td align="center" width="90">
         <a href="https://cplusplus.com/" target="_blank"><img alt="C++" width="45" height="45" src="https://raw.githubusercontent.com/BeautifulMoon211/BeautifulMoon211/auxiliary/languages/c++.svg" /></a>
         <br><h4>$\textsf{\color{#ff3845}{C++}}$</h4>
-    </td>
-    <td align="center" width="90">
-        <a href="https://rubyonrails.org/" target="_blank"><img alt="Ruby on Rails" width="45" src="https://raw.githubusercontent.com/BeautifulMoon211/BeautifulMoon211/auxiliary/languages/ruby%20on%20rails.svg" /></a>
-        <br><h4>$\textsf{\color{#ff3845}{Ruby on Rails}}$</h4>
-    </td>
-    <td align="center" width="90">
     </td>
   </tr>
 </table>
