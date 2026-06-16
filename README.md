@@ -62,6 +62,34 @@
 </table>
 
 <h2>
+  $\textsf{\color{#7957d5}{AI}}$
+</h2>
+<table align="center">
+  <tr>
+    <td align="center" width="90">
+        <a href="https://openai.com/" target="_blank"><img alt="OpenAI" width="45" height="45" src="https://raw.githubusercontent.com/BeautifulMoon211/BeautifulMoon211/auxiliary/ai/OpenAI.png" /></a>
+        <br><h4>$\textsf{\color{#ff3845}{OpenAI}}$</h4>
+    </td>
+    <td align="center" width="90">
+        <a href="https://www.anthropic.com/" target="_blank"><img alt="Anthropic" width="45" height="45" src="https://raw.githubusercontent.com/BeautifulMoon211/BeautifulMoon211/auxiliary/ai/Anthropic.svg" /></a>
+        <br><h4>$\textsf{\color{#ff3845}{Anthropic}}$</h4>
+    </td>
+    <td align="center" width="90">
+        <a href="https://modelcontextprotocol.io/" target="_blank"><img alt="MCP" width="45" height="45" src="https://raw.githubusercontent.com/BeautifulMoon211/BeautifulMoon211/auxiliary/ai/MCP.svg" /></a>
+        <br><h4>$\textsf{\color{#ff3845}{MCP}}$</h4>
+    </td>
+    <td align="center" width="90">
+        <a href="https://www.langchain.com/" target="_blank"><img alt="LangChain" width="45" height="45" src="https://raw.githubusercontent.com/BeautifulMoon211/BeautifulMoon211/auxiliary/ai/LangChain.png" /></a>
+        <br><h4>$\textsf{\color{#ff3845}{LangChain}}$</h4>
+    </td>
+    <td align="center" width="90">
+        <a href="https://www.langchain.com/langgraph" target="_blank"><img alt="LangGraph" width="45" height="45" src="https://raw.githubusercontent.com/BeautifulMoon211/BeautifulMoon211/auxiliary/ai/LangGraph.png" /></a>
+        <br><h4>$\textsf{\color{#ff3845}{LangGraph}}$</h4>
+    </td>
+  </tr>
+</table>
+
+<h2>
   $\textsf{\color{#7957d5}{Libraries}}$
 </h2>
 <table align="center">
@@ -97,6 +125,20 @@
     <td align="center" width="90">
         <a href="https://threejs.org/" target="_blank"><img alt="Three.js" width="45" height="45" src="https://raw.githubusercontent.com/BeautifulMoon211/BeautifulMoon211/auxiliary/libraries/three.js.svg" /></a>
         <br><h4>$\textsf{\color{#ff3845}{Three.js}}$</h4>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" width="90">
+        <a href="https://scikit-learn.org/" target="_blank"><img alt="Scikit-Learn" width="45" height="45" src="https://raw.githubusercontent.com/BeautifulMoon211/BeautifulMoon211/auxiliary/libraries/Scikit-Learn.svg" /></a>
+        <br><h4>$\textsf{\color{#ff3845}{Scikit-Learn}}$</h4>
+    </td>
+    <td align="center" width="90">
+        <a href="https://pytorch.org/" target="_blank"><img alt="PyTorch" width="45" height="45" src="https://raw.githubusercontent.com/BeautifulMoon211/BeautifulMoon211/auxiliary/libraries/PyTorch.svg" /></a>
+        <br><h4>$\textsf{\color{#ff3845}{PyTorch}}$</h4>
+    </td>
+    <td align="center" width="90">
+        <a href="https://www.tensorflow.org/" target="_blank"><img alt="TensorFlow" width="45" height="45" src="https://raw.githubusercontent.com/BeautifulMoon211/BeautifulMoon211/auxiliary/libraries/TensorFlow.gif" /></a>
+        <br><h4>$\textsf{\color{#ff3845}{TensorFlow}}$</h4>
     </td>
   </tr>
 </table>
@@ -157,14 +199,20 @@
         <br><h4>$\textsf{\color{#ff3845}{MySQL}}$</h4>
     </td>
     <td align="center" width="90">
+        <a href="https://redis.io/" target="_blank"><img alt="Redis" width="45" height="45" src="https://raw.githubusercontent.com/BeautifulMoon211/BeautifulMoon211/auxiliary/databases/Redis.svg" /></a>
+        <br><h4>$\textsf{\color{#ff3845}{Redis}}$</h4>
     </td>
     <td align="center" width="90">
+        <a href="https://www.pinecone.io/" target="_blank"><img alt="Pinecone" width="45" height="45" src="https://raw.githubusercontent.com/BeautifulMoon211/BeautifulMoon211/auxiliary/databases/Pinecone.png" /></a>
+        <br><h4>$\textsf{\color{#ff3845}{Pinecone}}$</h4>
     </td>
     <td align="center" width="90">
+        <a href="https://www.trychroma.com/" target="_blank"><img alt="ChromaDB" width="45" height="45" src="https://raw.githubusercontent.com/BeautifulMoon211/BeautifulMoon211/auxiliary/databases/ChromaDB.webp" /></a>
+        <br><h4>$\textsf{\color{#ff3845}{ChromaDB}}$</h4>
     </td>
     <td align="center" width="90">
-    </td>
-    <td align="center" width="90">
+        <a href="https://weaviate.io/" target="_blank"><img alt="Weaviate" width="45" height="45" src="https://raw.githubusercontent.com/BeautifulMoon211/BeautifulMoon211/auxiliary/databases/Weaviate.png" /></a>
+        <br><h4>$\textsf{\color{#ff3845}{Weaviate}}$</h4>
     </td>
   </tr>
 </table>
