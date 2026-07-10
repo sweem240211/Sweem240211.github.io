@@ -207,11 +207,11 @@
         <br><h4>$\textsf{\color{#ff3845}{Pinecone}}$</h4>
     </td>
     <td align="center" width="90">
-        <a href="https://www.trychroma.com/" target="_blank"><img alt="ChromaDB" width="45" height="45" src="https://raw.githubusercontent.com/Sweem240211/Sweem240211/auxiliary/databases/ChromaDB.webp" /></a>
+        <a href="https://www.trychroma.com/" target="_blank"><img alt="ChromaDB" height="45" src="https://raw.githubusercontent.com/Sweem240211/Sweem240211/auxiliary/databases/ChromaDB.webp" /></a>
         <br><h4>$\textsf{\color{#ff3845}{ChromaDB}}$</h4>
     </td>
     <td align="center" width="90">
-        <a href="https://weaviate.io/" target="_blank"><img alt="Weaviate" width="45" height="45" src="https://raw.githubusercontent.com/Sweem240211/Sweem240211/auxiliary/databases/Weaviate.png" /></a>
+        <a href="https://weaviate.io/" target="_blank"><img alt="Weaviate" height="45" src="https://raw.githubusercontent.com/Sweem240211/Sweem240211/auxiliary/databases/Weaviate.png" /></a>
         <br><h4>$\textsf{\color{#ff3845}{Weaviate}}$</h4>
     </td>
   </tr>
