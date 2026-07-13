@@ -1,0 +1,11 @@
+[2026-07-13T18:26:32.846Z] [warning] GSAP target .education .box not found. https://greensock.com
+[2026-07-13T18:26:32.846Z] [log]  Portfolio loaded successfully
+[2026-07-13T18:26:32.982Z] [warning] GSAP target .home-content h1 not found. https://greensock.com
+[2026-07-13T18:26:32.982Z] [warning] GSAP target  not found. https://greensock.com
+[2026-07-13T18:26:32.984Z] [warning] GSAP target .about .content not found. https://greensock.com
+[2026-07-13T18:26:32.984Z] [warning] GSAP target  not found. https://greensock.com
+[2026-07-13T18:26:32.984Z] [warning] GSAP target .footer-social a not found. https://greensock.com
+[2026-07-13T18:26:32.984Z] [warning] GSAP target  not found. https://greensock.com
+[2026-07-13T18:26:32.993Z] [log]  Hacker mode activated
+[2026-07-13T18:26:32.993Z] [log]  Ghost Cursor Activated
+[2026-07-13T18:26:33.434Z] [error] Failed to load resource: the server responded with a status of 429 ()

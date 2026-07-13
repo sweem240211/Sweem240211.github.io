@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>SWEEM240211 | Portfolio</title>
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+  <link rel="apple-touch-icon" href="assets/images/favicon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Sweem240211 - AI & Full-Stack Engineer specializing in web development, LLM integration, and data scraping & automation." />
+  <meta name="keywords"
+    content="sweem240211, portfolio, full-stack engineer, AI engineer, LLM, data scraping, web automation, python, typescript, backend" />
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+
+  <link rel="stylesheet" href="assets/css/main.css">
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+</head>
+
+<body>
+
+
+  <script>
+    window.scrollTo(0, 0);
+
+
+    window.isLoaded = false;
+
+    window.addEventListener('load', function () {
+      window.isLoaded = true;
+    });
+
+    function activateSlowNetMode() {
+      var loader = document.getElementById('loader');
+      var connectingForSlowNet = document.getElementById('slow-net-msg');
+      var eyeLoader = document.getElementById('giant-matrix-eye');
+      var robotContainer = document.querySelector('.ai-face-glitch');
+      var cssRobot = document.getElementById('css-robot');
+      var runningImg = document.getElementById('running-robot-img');
+      var entranceMsg = document.querySelector('.entrance-message');
+
+      if (loader) loader.classList.remove('hidden');
+
+      if (connectingForSlowNet) connectingForSlowNet.style.display = 'block';
+
+       if (eyeLoader) eyeLoader.style.display = 'none';
+      if (runningImg) runningImg.style.display = 'none';
+      if (cssRobot) cssRobot.style.display = 'block';
+
+      if (robotContainer) {
+        robotContainer.classList.add('running-mode');
+        robotContainer.classList.remove('scanning');
+      }
+
+      if (entranceMsg) entranceMsg.style.display = 'none';
+    }
+
+    function scrambleText(element) {
+      if (!element) return;
+
+      const originalText = element.getAttribute('data-text') || element.textContent;
+      const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#$%&";
+      let iteration = 0;
+      let interval = null;
+
+      clearInterval(interval);
+
+      interval = setInterval(() => {
+        const newText = originalText
+          .split("")
+          .map((letter, index) => {
+            if (index < iteration) {
+              return originalText[index];
+            }
+            return letters[Math.floor(Math.random() * letters.length)];
+          })
+          .join("");
+
+        element.innerText = newText;
+
+
+        if (iteration >= originalText.length) {
+          clearInterval(interval);
+          element.innerText = originalText;
+        }
+
+        iteration += 1 / 3;
+      }, 30);
+    }
+
+    function deactivateLoader() {
+      var loader = document.getElementById('loader');
+      if (loader) loader.classList.add('hidden');
+      window.scrollTo(0, 0);
+
+
+      var logo = document.querySelector('.logo');
+      var logoText = document.querySelector('.logo-text');
+
+      if (logo) {
+        logo.classList.add('anim-active');
+
+
+        setTimeout(() => {
+          if (logoText) scrambleText(logoText);
+        }, 3200);
+
+
+        setTimeout(() => {
+          logo.classList.remove('anim-active');
+        }, 4000);
+      }
+    }
+
+    if (!navigator.onLine) {
+      activateSlowNetMode();
+    }
+
+    window.addEventListener('offline', activateSlowNetMode);
+    window.addEventListener('online', function () {
+      if (window.isLoaded) {
+        deactivateLoader();
+      }
+    });
+
+    setTimeout(function () {
+      if (window.isLoaded) {
+        deactivateLoader();
+      } else {
+        activateSlowNetMode();
+        window.addEventListener('load', deactivateLoader);
+      }
+    }, 3500);
+  </script>
+
+
+  <div id="loader" class="loader">
+
+    <div class="loader-scanlines"></div>
+
+
+    
+    <div class="cyber-eye-loader" id="giant-matrix-eye">
+      <svg class="anime-eye-svg" viewBox="0 0 500 250" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          
+          <clipPath id="eyeClip">
+            <path d="M 60,160 
+                     C 150,60 300,50 460,100 
+                     C 330,200 150,190 60,160 Z" />
+          </clipPath>
+          
+          <filter id="neonGlow" x="-20%" y="-20%" width="140%" height="140%">
+            <feDropShadow dx="0" dy="0" stdDeviation="4" flood-color="#00ff7a" flood-opacity="0.9" />
+          </filter>
+        </defs>
+
+        <foreignObject x="0" y="0" width="500" height="250" clip-path="url(#eyeClip)">
+          <div class="eye-ball hollow-eyeball" xmlns="http://www.w3.org/1999/xhtml">
+            <div class="eye-iris hollow-iris">
+              <div class="iris-tech-ring"></div>
+              <div class="eye-pupil"></div>
+              <div class="eye-glare"></div>
+            </div>
+            <div class="eye-scanline"></div>
+          </div>
+        </foreignObject>
+
+    
+        <g stroke="#00ff7a" stroke-width="2" filter="url(#neonGlow)" fill="#040608">
+          
+          
+          <path class="top-lash" 
+                d="M 60,160 
+                   C 150,60 300,50 460,100 
+                   L 480,115 
+                   C 330,10 120,20 40,170 
+                   Z" />
+          
+          
+          <path class="bottom-lash" 
+                d="M 60,160 
+                   C 150,190 330,200 460,100 
+                   L 480,115 
+                   C 330,220 140,210 40,170 
+                   Z" />
+
+          
+          <g class="blocky-lashes">
+            <path d="M 140,196 L 140,215 L 152,215 L 152,198 Z" />
+            <path d="M 190,202 L 190,222 L 202,222 L 202,205 Z" />
+            <path d="M 250,208 L 250,228 L 262,228 L 262,210 Z" />
+            <path d="M 310,203 L 315,223 L 327,220 L 322,201 Z" />
+            <path d="M 370,185 L 378,203 L 390,198 L 382,175 Z" />
+          </g>
+        </g>
+
+        
+        <path class="blink-lid top-blink" 
+              d="M 60,160 C 150,60 300,50 460,100 C 330,200 150,190 60,160 Z" 
+              fill="#040608" stroke="#00ff7a" stroke-width="2" filter="url(#neonGlow)" />
+      </svg>
+    </div>
+
+    <div class="ai-face-wrapper">
+      <div class="ai-face-glitch">
+        <div id="css-robot" class="css-robot" style="display: none;">
+          <div class="robot-head">
+            <div class="kakashi-hair"></div>
+            <div class="robot-mask"></div>
+            <div class="robot-eye-slit"></div>
+            <div class="robot-headband-knot"></div>
+            <div class="robot-headband-tail long"></div>
+            <div class="robot-headband-tail short"></div>
+          </div>
+          <div class="robot-body">
+            <div class="ninja-belt"></div>
+            <div class="ninja-gear"></div>
+          </div>
+          <div class="robot-arm left"></div>
+          <div class="robot-arm right"></div>
+          <div class="robot-leg left">
+            <div class="robot-foot"></div>
+          </div>
+          <div class="robot-leg right">
+            <div class="robot-foot"></div>
+          </div>
+        </div>
+      </div>
+      <div id="slow-net-msg" class="connecting-text" style="display: none;" role="alert">PLEASE
+        WAIT<br>CONNECTING...</br></div>
+    </div>
+
+
+    <div class="entrance-message">
+      <div class="message-text">ENTERING SWEEM'S DOMAIN</div>
+      <div class="loading-bar">
+        <div class="loading-progress"></div>
+      </div>
+    </div>
+  </div>
+
+
+  <div id="bg-grid-layer"></div>
+  <canvas id="bg-cloud-canvas"></canvas>
+  <div id="bg-token-layer"></div>
+  <canvas id="cursorCanvas"></canvas>
+
+
+  <div class="floating-orbs">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+  </div>
+
+  <header class="header">
+    <a href="#home" class="logo">
+
+      <span class="logo-bracket">&lt;</span><span class="logo-text" data-text="Sweem">Sweem</span><span
+        class="logo-bracket">/&gt;</span>
+    </a>
+
+
+    <div class="mobile-menu-btn" id="mobileMenuBtn">
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+    </div>
+
+    <nav class="nav" id="mainNav">
+      <ul>
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#achievements">Achievements</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div id="theme-toggle" class="theme-toggle">
+      <i class="fas fa-sun"></i>
+    </div>
+  </header>
+
+  <section class="home" id="home">
+    <div class="home-content">
+      <h2>Hi There,<br />I'm <span class="highlight">Sweem</span></h2>
+      <p>I am into <span class="typing-text" id="roleSwitcher"></span><span class="typing-cursor">|</span></p>
+
+      <a href="#about" class="btn">
+        <span>About Me</span>
+        <i class="fas fa-arrow-circle-down"></i>
+      </a>
+
+      <div class="socials">
+        <ul class="social-icons">
+          <li><a class="telegram" href="https://t.me/cx240211" target="_blank"
+              aria-label="Telegram"><i class="fab fa-telegram"></i></a></li>
+          <li><a class="github" href="https://github.com/sweem240211" target="_blank" aria-label="GitHub"><i
+                class="fab fa-github"></i></a></li>
+          <li><a class="email" href="mailto:cx240211@gmail.com" aria-label="Email"><i
+                class="fas fa-envelope"></i></a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="home-image">
+      <div class="image-container">
+        <div class="image-glow"></div>
+        <img src="https://github.com/sweem240211.png" alt="Sweem" class="profile-img">
+      </div>
+    </div>
+
+    <div class="terminal-hint">
+      <div class="hint-label">COMMAND LINE</div>
+      <div class="keys-wrapper">
+        <div class="key">CTRL</div>
+        <span class="plus">+</span>
+        <div class="key">K</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <h2 class="heading"><i class="fas fa-user-alt"></i> About <span>Me</span></h2>
+
+    <div class="row">
+      <div class="about-image">
+        <div class="image-container tilt">
+          <div class="image-glow"></div>
+          <img src="https://github.com/sweem240211.png" alt="Sweem" class="profile-img">
+        </div>
+      </div>
+
+      <div class="about-content">
+        <h3>I'm Sweem</h3>
+        <span class="tag">AI & Full-Stack Engineer</span>
+
+        <p>
+          I'm a full-stack engineer with 10+ years of experience building web applications, backend
+          systems, and automation tooling. I specialize in AI/LLM integration (OpenAI, Anthropic,
+          LangChain) and in data scraping &amp; automation at scale. I enjoy turning messy, manual
+          workflows into reliable, well-engineered software, and I'm always picking up new tools and
+          technologies to ship better products.
+        </p>
+
+        <div class="box-container">
+          <div class="box">
+            <p><span>Email:</span> cx240211@gmail.com</p>
+            <p><span>Availability:</span> Open to freelance &amp; remote work</p>
+          </div>
+        </div>
+
+        <div class="resumebtn">
+          <a href="https://github.com/sweem240211" target="_blank" class="btn">
+            <span>View My GitHub</span>
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="skills" id="skills">
+    <h2 class="heading"><i class="fas fa-laptop-code"></i> Skills & <span>Abilities</span></h2>
+
+    <div class="container">
+      <div id="skillsContainer" class="skills-content">
+
+      </div>
+    </div>
+  </section>
+
+  <section class="work" id="projects">
+    <h2 class="heading"><i class="fas fa-laptop-code"></i> Projects <span>Made</span></h2>
+
+    <div class="box-container" id="projectsContainer">
+
+    </div>
+
+    <div class="viewall">
+      <a href="https://github.com/sweem240211" target="_blank" class="btn">
+        <span>View All on GitHub</span>
+        <i class="fas fa-arrow-right"></i>
+      </a>
+    </div>
+  </section>
+
+  <section class="achievements-section" id="achievements">
+    <h2 class="heading"><i class="fas fa-trophy"></i> Achievements & <span>Highlights</span></h2>
+
+    <div class="achievements-grid" id="achievementsContainer">
+
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <h2 class="heading"><i class="fas fa-headset"></i> Get in <span>Touch</span></h2>
+
+    <div class="container">
+      <div class="content">
+        <div class="image-box">
+          <div class="contact-graphic">
+            <i class="fas fa-paper-plane"></i>
+          </div>
+        </div>
+
+        <form id="contact-form" class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+
+          <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY">
+          <input type="hidden" name="subject" value="New Contact from Portfolio - Sweem">
+          <input type="hidden" name="from_name" value="Portfolio Contact Form">
+
+          <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+          <div class="form-group">
+            <div class="field">
+              <input type="text" name="name" placeholder="Your Name" required>
+              <i class="fas fa-user"></i>
+            </div>
+            <div class="field">
+              <input type="email" name="email" placeholder="Your Email" required>
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div class="field">
+              <input type="text" name="phone" placeholder="Phone (Optional)">
+              <i class="fas fa-phone"></i>
+            </div>
+            <div class="message">
+              <textarea name="message" placeholder="Your Message" required></textarea>
+              <i class="fas fa-comment-dots"></i>
+            </div>
+          </div>
+
+          <div class="button-area">
+            <span id="form-status"></span>
+            <button type="submit" class="btn">
+              <span>Send Message</span>
+              <i class="fas fa-paper-plane"></i>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <div class="scroll-spy">
+    <a href="#home" class="spy-item active" data-target="home">
+      <span class="spy-text">HOME</span>
+      <span class="spy-marker"></span>
+    </a>
+    <a href="#about" class="spy-item" data-target="about">
+      <span class="spy-text">ABOUT</span>
+      <span class="spy-marker"></span>
+    </a>
+    <a href="#skills" class="spy-item" data-target="skills">
+      <span class="spy-text">SKILLS</span>
+      <span class="spy-marker"></span>
+    </a>
+    <a href="#projects" class="spy-item" data-target="projects">
+      <span class="spy-text">PROJECTS</span>
+      <span class="spy-marker"></span>
+    </a>
+    <a href="#achievements" class="spy-item" data-target="achievements">
+      <span class="spy-text">ACHIEVE</span>
+      <span class="spy-marker"></span>
+    </a>
+    <a href="#contact" class="spy-item" data-target="contact">
+      <span class="spy-text">CONTACT</span>
+      <span class="spy-marker"></span>
+    </a>
+  </div>
+
+  <footer class="footer">
+    <div class="box-container">
+      <div class="box">
+        <h3>Sweem's Portfolio</h3>
+        <p>Thank you for visiting.<br /><br />Connect me here on socials.
+        </p>
+      </div>
+
+      <div class="box">
+        <h3>Quick Links</h3>
+        <a href="#home"><i class="fas fa-chevron-circle-right"></i> Home</a>
+        <a href="#about"><i class="fas fa-chevron-circle-right"></i> About</a>
+        <a href="#skills"><i class="fas fa-chevron-circle-right"></i> Skills</a>
+        <a href="#projects"><i class="fas fa-chevron-circle-right"></i> Projects</a>
+        <a href="#achievements"><i class="fas fa-chevron-circle-right"></i> Achievements</a>
+        <a href="#contact"><i class="fas fa-chevron-circle-right"></i> Contact</a>
+      </div>
+
+      <div class="box">
+        <h3>Contact Info</h3>
+        <p><i class="fas fa-envelope"></i> cx240211@gmail.com</p>
+        <p><i class="fas fa-map-marked-alt"></i> Remote / Worldwide</p>
+        <div class="share">
+          <a href="https://t.me/cx240211" class="fab fa-telegram" target="_blank"
+            aria-label="Telegram"></a>
+          <a href="https://github.com/sweem240211" class="fab fa-github" target="_blank" aria-label="GitHub"></a>
+          <a href="mailto:cx240211@gmail.com" class="fas fa-envelope" aria-label="Email"></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="system-hud">
+      <div class="corner-bracket top-left"></div>
+      <div class="corner-bracket top-right"></div>
+      <div class="corner-bracket bottom-left"></div>
+      <div class="corner-bracket bottom-right"></div>
+
+      <div class="micro-hex left">TEST_V.8.0</div>
+      <div class="micro-hex right">0x4F</div>
+
+
+      <div class="ticker-content">
+
+        <div class="hud-item">
+          <span class="status-dot"></span>
+          <span class="sys-text">SYSTEM ONLINE</span>
+        </div>
+        <div class="hud-item">
+          <span class="decode-text" data-value="Building Reliable Software">Building Reliable Software</span>
+          <i class="fas fa-bolt cyber-spark"></i>
+        </div>
+        <div class="hud-item">
+          <span class="dev-label">DEV:</span>
+          <a href="https://github.com/sweem240211" class="name-glitch" data-text="Sweem">Sweem</a>
+          
+        </div>
+        <div class="hud-item separator-hex">::</div>
+        <div class="hud-item">
+          <span class="sys-text">&copy; 2026</span>
+        </div>
+
+
+        <div class="hud-item">
+          <span class="status-dot"></span>
+          <span class="sys-text">SYSTEM ONLINE</span>
+        </div>
+        <div class="hud-item">
+          <span class="decode-text" data-value="Building Reliable Software">Building Reliable Software</span>
+          <i class="fas fa-bolt cyber-spark"></i>
+        </div>
+        <div class="hud-item">
+          <span class="dev-label">DEV:</span>
+          <a href="https://github.com/sweem240211" class="name-glitch" data-text="Sweem">Sweem</a>
+          
+        </div>
+        <div class="hud-item separator-hex">::</div>
+        <div class="hud-item">
+          <span class="sys-text">&copy; 2026</span>
+        </div>
+
+
+        <div class="hud-item">
+          <span class="status-dot"></span>
+          <span class="sys-text">SYSTEM ONLINE</span>
+        </div>
+        <div class="hud-item">
+          <span class="decode-text" data-value="Building Reliable Software">Building Reliable Software</span>
+          <i class="fas fa-bolt cyber-spark"></i>
+        </div>
+        <div class="hud-item">
+          <span class="dev-label">DEV:</span>
+          <a href="https://github.com/sweem240211" class="name-glitch" data-text="Sweem">Sweem</a>
+          
+        </div>
+        <div class="hud-item separator-hex">::</div>
+        <div class="hud-item">
+          <span class="sys-text">&copy; 2026</span>
+        </div>
+
+
+        <div class="hud-item">
+          <span class="status-dot"></span>
+          <span class="sys-text">SYSTEM ONLINE</span>
+        </div>
+        <div class="hud-item">
+          <span class="decode-text" data-value="Building Reliable Software">Building Reliable Software</span>
+          <i class="fas fa-bolt cyber-spark"></i>
+        </div>
+        <div class="hud-item">
+          <span class="dev-label">DEV:</span>
+          <a href="https://github.com/sweem240211" class="name-glitch" data-text="Sweem">Sweem</a>
+          
+        </div>
+        <div class="hud-item separator-hex">::</div>
+        <div class="hud-item">
+          <span class="sys-text">&copy; 2026</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <canvas id="cursorCanvas"></canvas>
+
+
+  <a href="#home" class="scroll-top" id="scroll-top" aria-label="Scroll to top">
+    <i class="fas fa-angle-up"></i>
+  </a>
+
+
+  <script src="assets/js/app.js"></script>
+  <script src="assets/js/animations.js"></script>
+  <script src="assets/js/hacker-effects.js"></script>
+
+
+
+
+
+
+
+  <div id="cmd-palette" class="cmd-overlay hidden">
+    <div class="cmd-box">
+      <div class="cmd-header">
+        <span class="cmd-title">root@sweem240211:~</span>
+        <span class="cmd-close">×</span>
+      </div>
+      <div class="cmd-body">
+        <div class="cmd-output" id="cmd-output">
+          <div class="cmd-line">Welcome to Sweem's Terminal. Type <span class="cmd-keyword">help</span> for commands.
+          </div>
+        </div>
+        <div class="cmd-input-line">
+          <span class="prompt">➜</span>
+          <input type="text" id="cmd-input" autocomplete="off" spellcheck="false" autofocus>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="noise-overlay"></div>
+
+</body>
+
+
+
+</html>
+
+
+
